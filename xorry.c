@@ -120,12 +120,12 @@ int main(int argc, char **argv)
     answer_string[27] = '\0';
 
     if (len_diff > 0) {
-        strcpy(first_string, argv[1]);
-        strcat(second_string, argv[2]);
+        strncpy(first_string, argv[1], 27);
+        strncat(second_string, argv[2], 27);
     }
     else {
-        strcpy(first_string, argv[2]);
-        strcat(second_string, argv[1]);
+        strncpy(first_string, argv[2], 27);
+        strncat(second_string, argv[1], 27);
     }
 
     //
